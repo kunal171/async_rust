@@ -70,6 +70,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "future"
+version = "0.1.0"
+dependencies = [
+ "tokio",
+]
+
+[[package]]
 name = "gimli"
 version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

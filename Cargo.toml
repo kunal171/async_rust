@@ -2,9 +2,12 @@
 author = ["Kunal"]
 
 [workspace]
-members = ["concurency"
-
+members = [
+    "concurency", 
+    "future"    
 ]
+
+
 resolver = "2"
 
 [workspace.dependencies]
