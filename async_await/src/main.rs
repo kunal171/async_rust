@@ -7,6 +7,12 @@ async fn main() {
     let first = first_async().await;
     let second = second_async(first).await;
     println!("Final Result: {}", second);
+
+    //Error Handling
+    match might_fail(false).await {
+        Ok(val) => println!("Success: {}", val),
+        Err(err) => println!("Error: {}", err)
+    }
     
 
 }
@@ -23,4 +29,15 @@ async fn first_async() -> i32 {
 
 async fn second_async(num: i32) -> i32 {
     num * 2
+}
+
+
+// Async/Await in error handling
+
+async fn might_fail(flag: bool) -> Result<i32, &'static str> {
+    if flag {
+        Ok(11)
+    }else {
+        Err("Something in the way")
+    }
 }
