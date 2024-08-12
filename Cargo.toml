@@ -3,7 +3,7 @@ author = ["Kunal"]
 
 [workspace]
 members = [ "async_await",
-    "concurency", 
+    "concurency", "executor", 
     "future"    
 ]
 
