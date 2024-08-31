@@ -9,6 +9,12 @@ async fn read_file(path: &str) -> std::io::Result<String> {
     Ok(contents)
 }
 
+async fn write_file(path: &str, content: &str) -> std::io::Result<()> {
+    let mut file = File::create(path).await?;
+    file.write_all(content.as_bytes()).await?;
+    Ok(())
+}
+
 fn main() {
     task::block_on(async {
         match read_file("example.txt").await {
