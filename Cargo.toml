@@ -5,7 +5,7 @@ author = ["Kunal"]
 members = [  "async_await", "asyncio",
     "concurency", "executor", 
     "future"    
-]
+, "task_spawning"]
 
 
 resolver = "2"
